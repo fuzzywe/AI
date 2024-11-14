@@ -1,45 +1,71 @@
-1.	What is the difference between supervised, unsupervised, and reinforcement learning?
-2.	Explain the bias-variance tradeoff. How do you address it in a model?
-3.	What are overfitting and underfitting, and how can you prevent them?
-4.	How do you select the right evaluation metric for a given problem?
-5.	What is cross-validation, and why is it important?
+**1.	What is the difference between supervised, unsupervised, and reinforcement learning?**
+   
+**supervised learning** gives output based on the learned data (images from moon).
+
+  **Self-supervised learning** is a type of machine learning where the system learns to predict part of its input from other parts of the 
+  
+  input without requiring labeled data. It is a form of unsupervised learning where the model generates its own labels based on the inherent
+  
+  structure of the input data.
+  
+ ** Self-Supervised Learning:** Self-supervised learning involves training a model on unlabeled data by generating pseudo-labels from the data 
+  
+  itself. For instance, in language modeling, a model predicts the next word in a sentence without explicit labels
+  
+   "Where can self-supervised learning be beneficial in real-world applications?" Answer: "In autonomous driving systems, self-supervised 
+   
+   learning can predict future movements of vehicles by analyzing patterns in historical data, thereby improving navigation and safety on the 
+   
+   roads."
+  
+  For example, in image classification, a model learns to classify images based on predefined labels such as "cat" or "dog". Similarly, in 
+  
+  spam detection, the model identifies whether an email is spam or not based on labeled training data. 
+
+
+  RL is based on a reward feedback loop, allowing the agent to learn from its experiences.
+  
+3.	Explain the bias-variance tradeoff. How do you address it in a model?
+4.	What are overfitting and underfitting, and how can you prevent them?
+5.	How do you select the right evaluation metric for a given problem?
+6.	What is cross-validation, and why is it important?
 Algorithms and Models:
-6.	What is the difference between linear regression and logistic regression?
-7.	Explain decision trees and how they handle overfitting.
-8.	What is a Support Vector Machine (SVM)? How does it work?
-9.	Explain k-nearest neighbors (KNN). How is the value of 'k' chosen?
-10.	Describe the working of a random forest and how it reduces variance.
-11.	How does a neural network learn? Explain backpropagation.
-12.	What is the difference between bagging and boosting?
+7.	What is the difference between linear regression and logistic regression?
+8.	Explain decision trees and how they handle overfitting.
+9.	What is a Support Vector Machine (SVM)? How does it work?
+10.	Explain k-nearest neighbors (KNN). How is the value of 'k' chosen?
+11.	Describe the working of a random forest and how it reduces variance.
+12.	How does a neural network learn? Explain backpropagation.
+13.	What is the difference between bagging and boosting?
 Deep Learning:
-13.	What is a convolutional neural network (CNN)? How does it work?
-14.	Explain the difference between LSTM and GRU in recurrent neural networks.
-15.	What is the vanishing gradient problem, and how can it be solved?
-16.	What is transfer learning, and when is it used?
-17.	Explain dropout and batch normalization in neural networks.
+14.	What is a convolutional neural network (CNN)? How does it work?
+15.	Explain the difference between LSTM and GRU in recurrent neural networks.
+16.	What is the vanishing gradient problem, and how can it be solved?
+17.	What is transfer learning, and when is it used?
+18.	Explain dropout and batch normalization in neural networks.
 Model Evaluation and Optimization:
-18.	What is a confusion matrix, and how do you interpret it?
-19.	Explain precision, recall, and F1-score. How are they different?
-20.	What is ROC-AUC, and why is it important in classification problems?
-21.	How does gradient descent work? What are the different types (e.g., batch, mini-batch, stochastic)?
-22.	Explain hyperparameter tuning and its importance in model performance.
+19.	What is a confusion matrix, and how do you interpret it?
+20.	Explain precision, recall, and F1-score. How are they different?
+21.	What is ROC-AUC, and why is it important in classification problems?
+22.	How does gradient descent work? What are the different types (e.g., batch, mini-batch, stochastic)?
+23.	Explain hyperparameter tuning and its importance in model performance.
 Feature Engineering and Data Preprocessing:
-23.	What is feature selection, and why is it important?
-24.	How do you handle missing data in a dataset?
-25.	What is one-hot encoding, and when would you use it?
-26.	Explain the difference between normalization and standardization.
-27.	How do you deal with imbalanced datasets?
+24.	What is feature selection, and why is it important?
+25.	How do you handle missing data in a dataset?
+26.	What is one-hot encoding, and when would you use it?
+27.	Explain the difference between normalization and standardization.
+28.	How do you deal with imbalanced datasets?
 Advanced Topics:
-28.	What is ensemble learning, and how does it improve model performance?
-29.	What are generative adversarial networks (GANs), and how do they work?
-30.	Explain the difference between PCA and t-SNE for dimensionality reduction.
-31.	What is a recommendation system, and how do collaborative filtering and content-based filtering work?
-32.	How do you deploy a machine learning model in production?
+29.	What is ensemble learning, and how does it improve model performance?
+30.	What are generative adversarial networks (GANs), and how do they work?
+31.	Explain the difference between PCA and t-SNE for dimensionality reduction.
+32.	What is a recommendation system, and how do collaborative filtering and content-based filtering work?
+33.	How do you deploy a machine learning model in production?
 Real-World Applications:
-33.	How would you approach a classification problem in the finance sector?
-34.	How do you ensure that your model remains accurate over time?
-35.	Can you describe a machine learning pipeline? What are the key stages?
-36.	What are the ethical considerations in using machine learning in sensitive applications like healthcare?
+34.	How would you approach a classification problem in the finance sector?
+35.	How do you ensure that your model remains accurate over time?
+36.	Can you describe a machine learning pipeline? What are the key stages?
+37.	What are the ethical considerations in using machine learning in sensitive applications like healthcare?
 •  Fundamentals: 
 •	What is machine learning? How does it differ from traditional programming?
 •	Explain the difference between supervised, unsupervised, and reinforcement learning.
