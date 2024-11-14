@@ -37,6 +37,9 @@ For example, it may search through:
 
 ---
 
+![Gen AI Course _ Gen AI Tutorial For Beginners 23-54 screenshot](https://github.com/user-attachments/assets/eb211cbe-5152-46ae-8051-32143c14faf4)
+
+
 ### **Why is RAG Practical?** 🤩
 - **Real-time Access to Data**: By retrieving information from an external source, the bot is always up-to-date with the latest information. If policies change or a new product category is introduced, the bot can pull in the new details.
 - **Improved Accuracy**: The model no longer just "guesses" an answer based on the training data; it has **real information** to base its responses on.
