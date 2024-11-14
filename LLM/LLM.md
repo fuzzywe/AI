@@ -9,6 +9,17 @@
 ![Gen AI Course _ Gen AI Tutorial For Beginners 9-19 screenshot](https://github.com/user-attachments/assets/76809ce5-3be5-415d-a81b-a9255fd72d2e)
 
 
+![Gen AI Course _ Gen AI Tutorial For Beginners 11-8 screenshot](https://github.com/user-attachments/assets/8913984c-8ab2-4aae-ad6f-a6189cb49143)
+
+
+
+Stochastic means a system is characterized by randomness or probability
+
+![Gen AI Course _ Gen AI Tutorial For Beginners 11-21 screenshot](https://github.com/user-attachments/assets/b060280d-c46b-418b-a276-345e165e1494)
+
+ large language model contains trillions of parameters to understand the patterns.
+
+
 I understand you're looking for something truly distinct and impactful. Here’s a completely different angle, focusing on how LLMs function similarly to **human intuition and pattern recognition** on a grand scale.
 
 ---
