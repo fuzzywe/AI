@@ -21,6 +21,26 @@ Stochastic means a system is characterized by randomness or probability
 
 ![Gen AI Course _ Gen AI Tutorial For Beginners 12-49 screenshot](https://github.com/user-attachments/assets/465a3438-3585-4de2-aff6-c46c702fe3b9)
 
+
+![Gen AI Course _ Gen AI Tutorial For Beginners 13-29 screenshot](https://github.com/user-attachments/assets/7256e248-0ecd-400f-811e-ff8015d5cb98)
+
+semantic search means doesn't using exact matching understanding the intent of user query to perform the search example calories in apple 
+
+employees in apple
+
+Embedding is the numeric representation of words;.
+
+![Gen AI Course _ Gen AI Tutorial For Beginners 17-11 screenshot](https://github.com/user-attachments/assets/8774621b-87a4-4149-8e44-af8f60a92f7d)
+
+
+using vector you can find the similarity 
+
+
+![Gen AI Course _ Gen AI Tutorial For Beginners 19-15 screenshot](https://github.com/user-attachments/assets/02e1521c-c4bb-4075-983b-863453b1c22d)
+
+you will use the cosine similarity to find the matching vectors
+
+
 I understand you're looking for something truly distinct and impactful. Here’s a completely different angle, focusing on how LLMs function similarly to **human intuition and pattern recognition** on a grand scale.
 
 ---
