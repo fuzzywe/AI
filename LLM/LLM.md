@@ -1,4 +1,4 @@
-![Gen AI Course _ Gen AI Tutorial For Beginners 8-13 screenshot](https://github.com/user-attachments/assets/bcfea7b8-e2f9-4fe5-9262-446c1c7433bf)
+![Gen AI Course _ Gen AI Tutorial For Beginners 19-54 screenshot](https://github.com/user-attachments/assets/11d1dc3d-f365-43b2-a211-d901af4765b2)![Gen AI Course _ Gen AI Tutorial For Beginners 8-13 screenshot](https://github.com/user-attachments/assets/bcfea7b8-e2f9-4fe5-9262-446c1c7433bf)
 
 ![Gen AI Course _ Gen AI Tutorial For Beginners 8-23 screenshot](https://github.com/user-attachments/assets/24c998da-3d7f-442e-bf1c-62f072c77616)
 
@@ -39,6 +39,8 @@ using vector you can find the similarity
 ![Gen AI Course _ Gen AI Tutorial For Beginners 19-15 screenshot](https://github.com/user-attachments/assets/02e1521c-c4bb-4075-983b-863453b1c22d)
 
 you will use the cosine similarity to find the matching vectors
+
+![Gen AI Course _ Gen AI Tutorial For Beginners 19-54 screenshot](https://github.com/user-attachments/assets/fdbf5794-5f2d-4f6f-a026-2548c65f1e36)
 
 
 I understand you're looking for something truly distinct and impactful. Here’s a completely different angle, focusing on how LLMs function similarly to **human intuition and pattern recognition** on a grand scale.
