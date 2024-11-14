@@ -19,6 +19,7 @@ Stochastic means a system is characterized by randomness or probability
 
  large language model contains trillions of parameters to understand the patterns.
 
+![Gen AI Course _ Gen AI Tutorial For Beginners 12-49 screenshot](https://github.com/user-attachments/assets/465a3438-3585-4de2-aff6-c46c702fe3b9)
 
 I understand you're looking for something truly distinct and impactful. Here’s a completely different angle, focusing on how LLMs function similarly to **human intuition and pattern recognition** on a grand scale.
 
