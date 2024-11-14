@@ -24,6 +24,8 @@
 
 
   RL is based on a reward feedback loop, allowing the agent to learn from its experiences.
+
+---
   
 2.	Explain the bias-variance tradeoff. How do you address it in a model?
 
@@ -68,6 +70,10 @@ Think of it like drawing a line through a set of points:
 - **If you make the line too simple**, it may not capture the curve of the points well (high bias).
 - **If you make the line too complex**, it might curve through every single point, even random ones (high variance).
 - **The best line** is one that captures the general trend without going through every single random point.
+
+---
+
+
 5.	What are overfitting and underfitting, and how can you prevent them?
 6.	How do you select the right evaluation metric for a given problem?
 7.	What is cross-validation, and why is it important?
