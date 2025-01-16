@@ -72,8 +72,7 @@
     
     *Answer:* Direct prompts may be effective in some cultures but perceived as intrusive in others. Localizing CTAs to align with regional preferences mirrors global marketing strategies that adapt language and tone.
 
-![6 7  Bias Variance Tradeoff _ Machine Learning 8-24 screenshot](https://github.com/user
+![6 7  Bias Variance Tradeoff _ Machine Learning 8-24 screenshot](https://github.com/user-attachments/assets/34ad907d-ca2a-4694-b7db-06f410c6b55b)
 
 ![6 7  Bias Variance Tradeoff _ Machine Learning 6-27 screenshot](https://github.com/user-attachments/assets/0e3065a5-96e5-46be-a77c-bd0f04a72f41)
--attachments/assets/34ad907d-ca2a-4694-b7db-06f410c6b55b)
 
