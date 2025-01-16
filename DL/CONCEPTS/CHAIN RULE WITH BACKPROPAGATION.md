@@ -302,3 +302,7 @@ Unique Answer: Gradients can be visualized as arrows pointing in the direction o
 10. Question: How can you ensure that your backpropagation implementation is numerically stable?
 
 Unique Answer: Numerical stability is crucial to prevent errors from accumulating and distorting the gradient calculations. Techniques like gradient clipping, normalization, and careful selection of activation functions can help maintain numerical stability. Additionally, using appropriate data scaling and precision (e.g., using double-precision floating-point numbers) can improve the robustness of the backpropagation algorithm.
+
+![NoteGPT_MindMap_1736998255196](https://github.com/user-attachments/assets/25cedae0-bb89-42f2-a4fa-f9769bfd1382)
+
+
