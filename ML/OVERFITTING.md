@@ -3,6 +3,12 @@
 
 ![6 5  Overfitting in Machine Learning _ Causes for Overfitting and its Prevention 4-17 screenshot](https://github.com/user-attachments/assets/f812ad59-794a-46df-99a4-ab84382b00c0)
 
+
+![6 5  Overfitting in Machine Learning _ Causes for Overfitting and its Prevention 13-5 screenshot](https://github.com/user-attachments/assets/66ac9c55-fb67-4152-b7f4-a5f87cb73bb1)
+
+
+
+
 1. **What is overfitting in machine learning, and how does it affect a model’s performance?**  
    **Answer:** Overfitting occurs when a machine learning model learns not only the underlying patterns but also the noise and outliers in the training data. This results in high accuracy on the training data but poor performance on unseen test data. An overfit model lacks generalization, making it unreliable for real-world predictions. This is similar to memorizing answers for an exam rather than understanding concepts, leading to poor adaptability to new questions.
 
