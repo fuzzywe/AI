@@ -75,4 +75,8 @@
 ![6 7  Bias Variance Tradeoff _ Machine Learning 8-24 screenshot](https://github.com/user-attachments/assets/34ad907d-ca2a-4694-b7db-06f410c6b55b)
 
 ![6 7  Bias Variance Tradeoff _ Machine Learning 6-27 screenshot](https://github.com/user-attachments/assets/0e3065a5-96e5-46be-a77c-bd0f04a72f41)
+![6 7  Bias Variance Tradeoff _ Machine Learning 12-55 screenshot](https://github.com/user-attachments/assets/6356632f-a9c2-469e-8b1c-439f72c1eb4d)
+![6 7  Bias Variance Tradeoff _ Machine Learning 18-11 screenshot](https://github.com/user-attachments/assets/82e65591-ba00-4c07-a78f-553d0804c0cc)
+
+
 
