@@ -1,3 +1,8 @@
+
+![6 11  Gradient Descent in Machine Learning 12-29 screenshot](https://github.com/user-attachments/assets/f3967ad0-6684-43e0-b38c-ace32b619821)
+![6 11  Gradient Descent in Machine Learning 21-30 screenshot](https://github.com/user-attachments/assets/366b4784-d1d2-4c52-a098-9581b91d2a4a)
+
+
 Sure! Here are **10 interview questions** based on the video content, designed to test understanding and analytical thinking, along with structured answers demonstrating deep comprehension and real-world application.
 
 ---
