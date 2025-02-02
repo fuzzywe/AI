@@ -1,4 +1,4 @@
-Preparing for a neural network interview involves understanding fundamental concepts and being ready to discuss practical applications. Here are some commonly asked questions:
+ Preparing for a neural network interview involves understanding fundamental concepts and being ready to discuss practical applications. Here are some commonly asked questions:
 
 1. **What is a neural network?**
    - A neural network is a computational model inspired by the human brain, consisting of interconnected nodes (neurons) that process information in layers. They are fundamental to deep learning and are used for tasks like classification, regression, and pattern recognition. 
