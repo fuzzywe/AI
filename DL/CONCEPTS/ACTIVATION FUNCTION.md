@@ -1,4 +1,4 @@
-Here are more questions along with unique answers based on the video content:
+ Here are more questions along with unique answers based on the video content:
 
 1. **Why are activation functions important in neural networks?**
    - Activation functions are essential because they introduce non-linearity into the model, allowing the neural network to learn complex patterns. Without activation functions, the network would simply be a linear model, incapable of handling tasks like image recognition or natural language processing.
