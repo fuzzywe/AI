@@ -7,3 +7,6 @@
 ![Retrieval Augmented Generation (RAG) Explained_ Embedding, Sentence BERT, Vector Database (HNSW) 13-30 screenshot](https://github.com/user-attachments/assets/0bc794b8-d63b-416b-ab41-e6b5046a3067)
 ![Retrieval Augmented Generation (RAG) Explained_ Embedding, Sentence BERT, Vector Database (HNSW) 15-7 screenshot](https://github.com/user-attachments/assets/58359245-2ac6-4db9-addf-9dff7460e2fb)
 ![Retrieval Augmented Generation (RAG) Explained_ Embedding, Sentence BERT, Vector Database (HNSW) 16-53 screenshot](https://github.com/user-attachments/assets/27837957-3939-4f21-bc68-67c397dad5f0)
+![Retrieval Augmented Generation (RAG) Explained_ Embedding, Sentence BERT, Vector Database (HNSW) 18-7 screenshot](https://github.com/user-attachments/assets/3cf36e35-0a70-4f06-a1aa-d68e3dc4dae8)
+![Retrieval Augmented Generation (RAG) Explained_ Embedding, Sentence BERT, Vector Database (HNSW) 18-46 screenshot](https://github.com/user-attachments/assets/2c587ac7-1612-4d40-b01b-973d4bbfef94)
+![Retrieval Augmented Generation (RAG) Explained_ Embedding, Sentence BERT, Vector Database (HNSW) 19-7 screenshot](https://github.com/user-attachments/assets/985d66a5-b322-47f3-a1c7-01c7bc88ed01)
