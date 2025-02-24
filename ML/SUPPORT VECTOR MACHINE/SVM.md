@@ -1,3 +1,8 @@
+https://www.geeksforgeeks.org/support-vector-machine-algorithm/
+
+
+---
+
 Here’s a comprehensive list of **interview questions on Support Vector Machines (SVM)**, ranging from basic to advanced levels. These questions are designed to test your theoretical understanding, practical knowledge, and coding skills related to SVM.
 
 ---
