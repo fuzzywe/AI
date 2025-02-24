@@ -21,3 +21,6 @@
 ![Vector Databases simply explained! (Embeddings   Indexes) 1-50 screenshot](https://github.com/user-attachments/assets/3d6ad5d8-f88e-4035-a13b-6c365e020aaa)
 ![Vector Databases simply explained! (Embeddings   Indexes) 2-17 screenshot](https://github.com/user-attachments/assets/c729c8c0-f855-41e8-b8af-ca4b97c97ee7)
 ![Vector Databases simply explained! (Embeddings   Indexes) 2-50 screenshot](https://github.com/user-attachments/assets/6a5bf045-0c21-4bd4-9d24-edabd03da9d2)
+![Vector Databases simply explained! (Embeddings   Indexes) 3-24 screenshot](https://github.com/user-attachments/assets/0309bd15-f55a-4535-8927-ff8caa081462)
+![OpenAI Embeddings and Vector Databases Crash Course 0-41 screenshot](https://github.com/user-attachments/assets/5cf87d76-41bf-4616-9cc7-76751afdd3c6)
+![OpenAI Embeddings and Vector Databases Crash Course 0-46 screenshot](https://github.com/user-attachments/assets/9cff244a-8242-47ca-a2c6-825ce073990e)
