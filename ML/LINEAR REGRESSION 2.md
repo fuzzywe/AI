@@ -1,5 +1,7 @@
 https://www.geeksforgeeks.org/top-linear-regression-interview-questions/
 
+https://www.geeksforgeeks.org/machine-learning-interview-questions/?ref=ml_lbp
+
 I'll create interview questions and answers based on the linear regression content from the video. I'll structure these as if they were collected from various technical interview sources.
 
 1. **Q: Can you explain why linear regression is considered fundamental for deep learning algorithms like neural networks?**
