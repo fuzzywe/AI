@@ -145,31 +145,44 @@ False Negatives (FN) = **Wrongly classifying an event as a non-event** (Type II 
 
 Let me know if you need more examples! 😊
 
+---
 
-Q8. Can you cite some examples where a false positive is important than a false
-negative?
+**Q8. Can you cite some examples where a false positive is important than a false
+**negative?****
 Let us first understand what false positives and false negatives are
+
 • False Positives are the cases where you wrongly classified a non-event as an event a.k.a Type I
 error.
+
 • False Negatives are the cases where you wrongly classify events as non-events, a.k.a Type II error.
+
 Example 1: In the medical field, assume you have to give chemotherapy to patients. Assume a patient
 comes to that hospital and he is tested positive for cancer, based on the lab prediction but he actually
 doesn’t have cancer. This is a case of false positive. Here it is of utmost danger to start chemotherapy on
 this patient when he actually does not have cancer. In the absence of cancerous cell, chemotherapy will
 do certain damage to his normal healthy cells and might lead to severe diseases, even cancer.
+
 Example 2: Let’s say an e-commerce company decided to give $1000 Gift voucher to the customers whom
 they assume to purchase at least $10,000 worth of items. They send free voucher mail directly to 100
 customers without any minimum purchase condition because they assume to make at least 20% profit on
 sold items above $10,000. Now the issue is if we send the $1000 gift vouchers to customers who have not
 actually purchased anything but are marked as having made $10,000 worth of purchase.
-Q9. Can you cite some examples where a false negative important than a false
-positive? And vice versa?
+
+---
+
+**Q9. Can you cite some examples where a false negative important than a false**
+**positive? And vice versa?**
+
 Example 1 FN: What if Jury or judge decides to make a criminal go free?
 Example 2 FN: Fraud detection.
 Example 3 FP: customer voucher use promo evaluation: if many used it and actually if was not true,
 promo sucks.
-Q10. Can you cite some examples where both false positive and false negatives
-are equally important?
+
+---
+
+**Q10. Can you cite some examples where both false positive and false negatives**
+**are equally important?**
+
 In the Banking industry giving loans is the primary source of making money but at the same time if your
 repayment rate is not good you will not make any profit, rather you will risk huge losses.
 Banks don’t want to lose good customers and at the same point in time, they don’t want to acquire bad
