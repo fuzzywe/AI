@@ -764,569 +764,217 @@ Transformers outperform LSTMs because:
 
 For the coding questions and assignments, I'll provide a high-level approach to impress interviewers:
 
-### Write python code of a simple ANN:
-```python
-import numpy as np
-from sklearn.datasets import make_classification
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
+This is a comprehensive list of data science interview questions that covers a wide range of topics, from fundamental concepts to advanced techniques. Below, I’ll provide brief explanations or answers to some of these questions to help you prepare for your interviews. Let’s dive in:
 
-class SimpleANN:
-    def __init__(self, input_size, hidden_size, output_size):
-        # Initialize weights with small random values
-        self.W1 = np.random.randn(input_size, hidden_size) * 0.01
-        self.b1 = np.zeros((1, hidden_size))
-        self.W2 = np.random.randn(hidden_size, output_size) * 0.01
-        self.b2 = np.zeros((1, output_size))
-        
-    def relu(self, x):
-        return np.maximum(0, x)
-    
-    def relu_derivative(self, x):
-        return np.where(x > 0, 1, 0)
-    
-    def sigmoid(self, x):
-        return 1 / (1 + np.exp(-np.clip(x, -500, 500)))
-    
-    def forward(self, X):
-        # Hidden layer
-        self.z1 = np.dot(X, self.W1) + self.b1
-        self.a1 = self.relu(self.z1)
-        
-        # Output layer
-        self.z2 = np.dot(self.a1, self.W2) + self.b2
-        self.a2 = self.sigmoid(self.z2)
-        
-        return self.a2
-    
-    def backward(self, X, y, output, learning_rate=0.01):
-        m = X.shape[0]
-        
-        # Calculate gradients
-        dz2 = output - y
-        dW2 = np.dot(self.a1.T, dz2) / m
-        db2 = np.sum(dz2, axis=0, keepdims=True) / m
-        
-        dz1 = np.dot(dz2, self.W2.T) * self.relu_derivative(self.z1)
-        dW1 = np.dot(X.T, dz1) / m
-        db1 = np.sum(dz1, axis=0, keepdims=True) / m
-        
-        # Update parameters
-        self.W2 -= learning_rate * dW2
-        self.b2 -= learning_rate * db2
-        self.W1 -= learning_rate * dW1
-        self.b1 -= learning_rate * db1
-    
-    def train(self, X, y, epochs=1000, learning_rate=0.01):
-        for i in range(epochs):
-            # Forward pass
-            output = self.forward(X)
-            
-            # Backward pass
-            self.backward(X, y, output, learning_rate)
-            
-            # Print loss every 100 epochs
-            if i % 100 == 0:
-                loss = -np.mean(y * np.log(output + 1e-8) + (1-y) * np.log(1-output + 1e-8))
-                print(f"Epoch {i}, Loss: {loss}")
+---
 
-# Generate sample data
-X, y = make_classification(n_samples=1000, n_features=20, n_classes=2, random_state=42)
-y = y.reshape(-1, 1)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+### **1. What is the difference between classification and regression?**
+- **Classification** is used to predict discrete labels (e.g., spam or not spam, cat or dog). The output is a category.
+- **Regression** is used to predict continuous values (e.g., house prices, temperature). The output is a real number.
 
-# Create and train model
-model = SimpleANN(input_size=20, hidden_size=10, output_size=1)
-model.train(X_train, y_train, epochs=1000, learning_rate=0.01)
+---
 
-# Evaluate
-predictions = model.forward(X_test)
-binary_predictions = (predictions > 0.5).astype(int)
-accuracy = accuracy_score(y_test, binary_predictions)
-print(f"Test accuracy: {accuracy}")
+### **2. What is the difference between bias and variance?**
+- **Bias** is the error due to overly simplistic assumptions in the learning algorithm. High bias can cause underfitting.
+- **Variance** is the error due to the model’s sensitivity to small fluctuations in the training set. High variance can cause overfitting.
+
+---
+
+### **3. How to handle imbalanced datasets?**
+- Use techniques like:
+  - Resampling (oversampling minority class or undersampling majority class).
+  - Synthetic data generation (e.g., SMOTE).
+  - Use appropriate evaluation metrics (e.g., F1-score, AUC-ROC).
+  - Assign class weights during model training.
+
+---
+
+### **4. Which is your favorite ML algorithm? Why? Explain how it works?**
+- This is subjective. For example:
+  - **Random Forest**: It’s robust, handles overfitting well, and works for both classification and regression. It works by building multiple decision trees and aggregating their results.
+
+---
+
+### **5. What is Precision and Recall?**
+- **Precision**: The ratio of true positives to the total predicted positives (TP / (TP + FP)).
+- **Recall**: The ratio of true positives to the total actual positives (TP / (TP + FN)).
+
+---
+
+### **6. What is the difference between classification boundaries of logistic regression and SVM?**
+- **Logistic Regression**: Uses a linear decision boundary (unless kernelized) and minimizes log loss.
+- **SVM**: Tries to find the maximum margin hyperplane and can use kernels for non-linear boundaries.
+
+---
+
+### **7. How gradient descent works?**
+- Gradient descent is an optimization algorithm used to minimize a loss function. It iteratively updates the model parameters by moving in the direction of the negative gradient of the loss function.
+
+---
+
+### **8. What is Bayes Theorem?**
+- Bayes Theorem describes the probability of an event based on prior knowledge. It’s given by:
+  \[
+  P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
+  \]
+
+---
+
+### **9. What is Central Limit Theorem?**
+- The Central Limit Theorem states that the sampling distribution of the mean of any independent, random variable will be approximately normal if the sample size is large enough.
+
+---
+
+### **10. What are activation functions? Why are they used?**
+- Activation functions introduce non-linearity into neural networks, enabling them to learn complex patterns. Examples: ReLU, Sigmoid, Tanh.
+
+---
+
+### **11. Difference between sigmoid and ReLU?**
+- **Sigmoid**: Outputs values between 0 and 1. Prone to vanishing gradients.
+- **ReLU**: Outputs values between 0 and infinity. Avoids vanishing gradients and is computationally efficient.
+
+---
+
+### **12. How to handle gradient vanishing problem in CNNs?**
+- Use activation functions like ReLU.
+- Use weight initialization techniques (e.g., Xavier, He initialization).
+- Use normalization techniques (e.g., Batch Normalization).
+
+---
+
+### **13. How to choose the best 'K' in k-means algorithm?**
+- Use the **Elbow Method** (plot inertia vs. K and choose the elbow point).
+- Use **Silhouette Score** to evaluate clustering quality.
+
+---
+
+### **14. Discuss some use cases of clustering.**
+- Customer segmentation.
+- Anomaly detection.
+- Image segmentation.
+
+---
+
+### **15. How to do feature selection?**
+- Use techniques like:
+  - Correlation analysis.
+  - Recursive Feature Elimination (RFE).
+  - L1 regularization (Lasso).
+  - Feature importance from tree-based models.
+
+---
+
+### **16. How CNN works? Explain.**
+- CNNs use convolutional layers to extract spatial features from input data (e.g., images). They consist of:
+  - Convolutional layers (apply filters).
+  - Pooling layers (reduce dimensionality).
+  - Fully connected layers (for classification).
+
+---
+
+### **17. How LSTM works? Explain.**
+- LSTM (Long Short-Term Memory) is a type of RNN that handles sequential data. It uses gates (input, forget, output) to control information flow and avoid vanishing gradients.
+
+---
+
+### **18. SQL: Write a query to retrieve highest salary.**
+```sql
+SELECT MAX(salary) FROM employees;
 ```
 
-### For EDA, model training and deployment:
+---
 
-
-
-# End-to-End Machine Learning Project Guide
-## From EDA to Model Deployment
-
-This guide outlines the steps to take a classification dataset through exploratory data analysis (EDA), feature selection, model training, and deployment as a REST API using Flask.
-
-## 1. Exploratory Data Analysis
-
-### Setup and Data Loading
-```python
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.model_selection import train_test_split
-
-# Load dataset
-df = pd.read_csv('your_dataset.csv')
-
-# Basic information
-print(f"Dataset shape: {df.shape}")
-print(df.info())
-print(df.describe())
+### **19. SQL: Write a query to retrieve second highest salary.**
+```sql
+SELECT MAX(salary) FROM employees WHERE salary < (SELECT MAX(salary) FROM employees);
 ```
 
-### Missing Values Analysis
-```python
-# Check for missing values
-missing_values = df.isnull().sum()
-missing_percent = (missing_values / len(df)) * 100
+---
 
-missing_df = pd.DataFrame({
-    'Missing Values': missing_values,
-    'Percentage': missing_percent
-}).sort_values('Percentage', ascending=False)
+### **20. Difference between inner join and outer join.**
+- **Inner Join**: Returns only matching rows from both tables.
+- **Outer Join**: Returns all rows from one table and matching rows from the other (includes NULLs for non-matching rows).
 
-print(missing_df[missing_df['Missing Values'] > 0])
+---
 
-# Visualize missing values
-plt.figure(figsize=(12, 6))
-sns.heatmap(df.isnull(), cbar=False, cmap='viridis')
-plt.title('Missing Values Heatmap')
-plt.tight_layout()
-plt.show()
-```
+### **21. What is transfer learning? How it works?**
+- Transfer learning involves using a pre-trained model (e.g., on ImageNet) and fine-tuning it for a specific task. It saves time and computational resources.
 
-### Distribution Analysis
-```python
-# Target variable distribution
-plt.figure(figsize=(8, 6))
-target_counts = df['target'].value_counts()
-sns.barplot(x=target_counts.index, y=target_counts.values)
-plt.title('Target Variable Distribution')
-plt.xlabel('Class')
-plt.ylabel('Count')
-plt.show()
+---
 
-# Numeric features distribution
-num_cols = df.select_dtypes(include=['int64', 'float64']).columns
-for col in num_cols:
-    plt.figure(figsize=(12, 5))
-    
-    plt.subplot(1, 2, 1)
-    sns.histplot(df[col], kde=True)
-    plt.title(f'Distribution of {col}')
-    
-    plt.subplot(1, 2, 2)
-    sns.boxplot(x='target', y=col, data=df)
-    plt.title(f'{col} by Target')
-    
-    plt.tight_layout()
-    plt.show()
-```
+### **22. Explain the architecture of GANs.**
+- GANs (Generative Adversarial Networks) consist of two networks:
+  - **Generator**: Creates fake data.
+  - **Discriminator**: Distinguishes between real and fake data.
+  - They are trained together in a competitive manner.
 
-### Correlation Analysis
-```python
-# Correlation matrix
-plt.figure(figsize=(14, 10))
-corr_matrix = df.corr()
-mask = np.triu(np.ones_like(corr_matrix, dtype=bool))
-sns.heatmap(corr_matrix, mask=mask, annot=True, cmap='coolwarm', center=0, fmt='.2f')
-plt.title('Correlation Matrix')
-plt.tight_layout()
-plt.show()
+---
 
-# Correlation with target
-target_corr = corr_matrix['target'].sort_values(ascending=False)
-plt.figure(figsize=(10, 6))
-sns.barplot(x=target_corr.index, y=target_corr.values)
-plt.title('Feature Correlation with Target')
-plt.xticks(rotation=90)
-plt.tight_layout()
-plt.show()
-```
+### **23. What is entropy? Why we use it in decision trees?**
+- Entropy measures the impurity or randomness in a dataset. It’s used in decision trees to decide the best split by minimizing entropy.
 
-## 2. Feature Selection and Preprocessing
+---
 
-```python
-from sklearn.preprocessing import StandardScaler
-from sklearn.feature_selection import SelectKBest, f_classif, RFE
-from sklearn.ensemble import RandomForestClassifier
+### **24. What's the problem with transformers?**
+- Transformers require large amounts of data and computational resources. They can also be difficult to interpret.
 
-# Split data
-X = df.drop('target', axis=1)
-y = df['target']
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+---
 
-# Feature scaling
-scaler = StandardScaler()
-X_train_scaled = scaler.fit_transform(X_train)
-X_test_scaled = scaler.transform(X_test)
+### **25. What is ngram?**
+- An n-gram is a contiguous sequence of n items (e.g., words or characters) from a given sample of text. Used in NLP for feature extraction.
 
-# Method 1: Statistical feature selection
-selector = SelectKBest(f_classif, k=10)
-X_train_selected = selector.fit_transform(X_train_scaled, y_train)
-X_test_selected = selector.transform(X_test_scaled)
+---
 
-selected_features_mask = selector.get_support()
-selected_features = X.columns[selected_features_mask]
-print("Selected features (statistical):", selected_features.tolist())
+### **26. Which is the best suited activation function for textual problems?**
+- **Softmax** for classification tasks.
+- **ReLU** or **Tanh** for hidden layers in neural networks.
 
-# Method 2: Recursive Feature Elimination
-estimator = RandomForestClassifier(random_state=42)
-rfe = RFE(estimator=estimator, n_features_to_select=10)
-X_train_rfe = rfe.fit_transform(X_train_scaled, y_train)
-X_test_rfe = rfe.transform(X_test_scaled)
+---
 
-rfe_selected_features = X.columns[rfe.support_]
-print("Selected features (RFE):", rfe_selected_features.tolist())
+### **27. Discuss some applications of LSTM.**
+- Text generation.
+- Speech recognition.
+- Time series forecasting.
 
-# Method 3: Feature importance from Random Forest
-rf = RandomForestClassifier(random_state=42)
-rf.fit(X_train_scaled, y_train)
-importance = rf.feature_importances_
+---
 
-# Plot feature importance
-plt.figure(figsize=(12, 6))
-feat_importance = pd.DataFrame({
-    'Feature': X.columns,
-    'Importance': importance
-}).sort_values('Importance', ascending=False)
+### **28. Is there any alternate of back propagation?**
+- Yes, alternatives include:
+  - Evolutionary algorithms.
+  - Reinforcement learning.
+  - Hebbian learning.
 
-sns.barplot(x='Importance', y='Feature', data=feat_importance)
-plt.title('Feature Importance')
-plt.tight_layout()
-plt.show()
+---
 
-# Select top 10 features
-top_features = feat_importance['Feature'].head(10).tolist()
-print("Selected features (importance):", top_features)
-```
+### **29. What is the role of filters in CNN?**
+- Filters (or kernels) are used to extract features from input data by performing convolution operations.
 
-## 3. Model Training and Evaluation
+---
 
-```python
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-from sklearn.svm import SVC
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
-from sklearn.metrics import confusion_matrix, classification_report, roc_curve, auc
-from sklearn.model_selection import cross_val_score, GridSearchCV
-import joblib
+### **30. Why transformers are better than LSTMs?**
+- Transformers handle long-range dependencies better due to self-attention mechanisms. They are also parallelizable, making them faster to train.
 
-# Function to evaluate model
-def evaluate_model(model, X_train, y_train, X_test, y_test, model_name):
-    # Train model
-    model.fit(X_train, y_train)
-    
-    # Make predictions
-    y_pred = model.predict(X_test)
-    y_prob = model.predict_proba(X_test)[:, 1]
-    
-    # Calculate metrics
-    acc = accuracy_score(y_test, y_pred)
-    prec = precision_score(y_test, y_pred)
-    rec = recall_score(y_test, y_pred)
-    f1 = f1_score(y_test, y_pred)
-    auc_score = roc_auc_score(y_test, y_prob)
-    
-    print(f"Model: {model_name}")
-    print(f"Accuracy: {acc:.4f}")
-    print(f"Precision: {prec:.4f}")
-    print(f"Recall: {rec:.4f}")
-    print(f"F1 Score: {f1:.4f}")
-    print(f"AUC Score: {auc_score:.4f}")
-    print("\nConfusion Matrix:")
-    print(confusion_matrix(y_test, y_pred))
-    print("\nClassification Report:")
-    print(classification_report(y_test, y_pred))
-    
-    # Plot ROC curve
-    fpr, tpr, _ = roc_curve(y_test, y_prob)
-    plt.figure(figsize=(8, 6))
-    plt.plot(fpr, tpr, label=f'{model_name} (AUC = {auc_score:.4f})')
-    plt.plot([0, 1], [0, 1], 'k--')
-    plt.xlabel('False Positive Rate')
-    plt.ylabel('True Positive Rate')
-    plt.title(f'ROC Curve - {model_name}')
-    plt.legend()
-    plt.show()
-    
-    return model, acc, prec, rec, f1, auc_score
+---
 
-# Use selected features
-X_train_selected = X_train[top_features]
-X_test_selected = X_test[top_features]
+### **Coding Questions/Assignments**
+1. **Write Python code of a simple ANN**:
+   ```python
+   from tensorflow.keras.models import Sequential
+   from tensorflow.keras.layers import Dense
 
-# Define models
-models = {
-    'Logistic Regression': LogisticRegression(max_iter=1000, random_state=42),
-    'Random Forest': RandomForestClassifier(random_state=42),
-    'Gradient Boosting': GradientBoostingClassifier(random_state=42),
-    'SVM': SVC(probability=True, random_state=42)
-}
+   model = Sequential()
+   model.add(Dense(10, input_dim=8, activation='relu'))
+   model.add(Dense(1, activation='sigmoid'))
+   model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+   ```
 
-# Compare models
-results = {}
-for name, model in models.items():
-    print(f"Evaluating {name}...")
-    model, acc, prec, rec, f1, auc_score = evaluate_model(
-        model, X_train_selected, y_train, X_test_selected, y_test, name
-    )
-    results[name] = {
-        'model': model,
-        'accuracy': acc,
-        'precision': prec,
-        'recall': rec,
-        'f1': f1,
-        'auc': auc_score
-    }
-    print("-" * 50)
+2. **Pick any dataset and do a detailed EDA**:
+   - Use libraries like Pandas, Matplotlib, and Seaborn to analyze data distributions, correlations, and missing values.
 
-# Find best model
-best_model_name = max(results, key=lambda x: results[x]['f1'])
-best_model = results[best_model_name]['model']
-print(f"Best model: {best_model_name}")
+3. **Sentiment analysis of tweets**:
+   - Use libraries like NLTK or Hugging Face Transformers to preprocess text and build a sentiment analysis model.
 
-# Hyperparameter tuning for best model
-if best_model_name == 'Logistic Regression':
-    param_grid = {
-        'C': [0.001, 0.01, 0.1, 1, 10, 100],
-        'solver': ['liblinear', 'saga'],
-        'penalty': ['l1', 'l2']
-    }
-elif best_model_name == 'Random Forest':
-    param_grid = {
-        'n_estimators': [50, 100, 200],
-        'max_depth': [None, 10, 20, 30],
-        'min_samples_split': [2, 5, 10],
-        'min_samples_leaf': [1, 2, 4]
-    }
-elif best_model_name == 'Gradient Boosting':
-    param_grid = {
-        'n_estimators': [50, 100, 200],
-        'learning_rate': [0.01, 0.1, 0.2],
-        'max_depth': [3, 5, 7],
-        'subsample': [0.8, 1.0]
-    }
-elif best_model_name == 'SVM':
-    param_grid = {
-        'C': [0.1, 1, 10],
-        'gamma': ['scale', 'auto', 0.1, 0.01],
-        'kernel': ['rbf', 'linear']
-    }
+---
 
-print(f"Performing hyperparameter tuning for {best_model_name}...")
-grid = GridSearchCV(best_model, param_grid, cv=5, scoring='f1', n_jobs=-1)
-grid.fit(X_train_selected, y_train)
-
-print(f"Best parameters: {grid.best_params_}")
-print(f"Best cross-validation score: {grid.best_score_:.4f}")
-
-# Final model evaluation
-final_model = grid.best_estimator_
-_, acc, prec, rec, f1, auc_score = evaluate_model(
-    final_model, X_train_selected, y_train, X_test_selected, y_test, 
-    f"{best_model_name} (Tuned)"
-)
-
-# Save the model and preprocessor
-joblib.dump(final_model, 'model.pkl')
-joblib.dump(scaler, 'scaler.pkl')
-joblib.dump(top_features, 'selected_features.pkl')
-print("Model and preprocessors saved.")
-```
-
-## 4. Model Deployment with Flask
-
-### Project Structure
-```
-/project
-  /app
-    __init__.py
-    routes.py
-    /templates
-      index.html
-      prediction.html
-  app.py
-  model.pkl
-  scaler.pkl
-  selected_features.pkl
-  requirements.txt
-```
-
-### Flask Application Files
-
-**requirements.txt**
-```
-Flask==2.0.1
-pandas==1.3.3
-numpy==1.21.2
-scikit-learn==1.0
-joblib==1.1.0
-gunicorn==20.1.0
-```
-
-**app.py**
-```python
-from app import create_app
-
-app = create_app()
-
-if __name__ == '__main__':
-    app.run(debug=True)
-```
-
-**app/__init__.py**
-```python
-from flask import Flask
-
-def create_app():
-    app = Flask(__name__)
-    
-    from app.routes import main
-    app.register_blueprint(main)
-    
-    return app
-```
-
-**app/routes.py**
-```python
-import numpy as np
-import pandas as pd
-import joblib
-from flask import Blueprint, render_template, request, jsonify
-
-# Load model and preprocessors
-model = joblib.load('model.pkl')
-scaler = joblib.load('scaler.pkl')
-selected_features = joblib.load('selected_features.pkl')
-
-main = Blueprint('main', __name__)
-
-@main.route('/')
-def index():
-    return render_template('index.html', features=selected_features)
-
-@main.route('/predict', methods=['POST'])
-def predict():
-    if request.is_json:
-        # API request
-        data = request.get_json()
-        try:
-            # Create DataFrame with feature values
-            input_df = pd.DataFrame([data])
-            
-            # Check if all required features are present
-            missing_features = set(selected_features) - set(input_df.columns)
-            if missing_features:
-                return jsonify({'error': f'Missing features: {list(missing_features)}'}), 400
-            
-            # Select and scale features
-            input_df = input_df[selected_features]
-            input_scaled = scaler.transform(input_df)
-            
-            # Make prediction
-            prediction = model.predict(input_scaled)[0]
-            probability = model.predict_proba(input_scaled)[0][1]
-            
-            return jsonify({
-                'prediction': int(prediction),
-                'probability': float(probability)
-            })
-        except Exception as e:
-            return jsonify({'error': str(e)}), 400
-    else:
-        # Form submission
-        try:
-            # Get form data
-            form_data = request.form
-            input_data = {}
-            
-            # Convert form inputs to appropriate types
-            for feature in selected_features:
-                value = form_data.get(feature, '')
-                try:
-                    input_data[feature] = float(value)
-                except ValueError:
-                    # Handle categorical features if needed
-                    input_data[feature] = value
-            
-            # Create DataFrame with feature values
-            input_df = pd.DataFrame([input_data])
-            
-            # Select and scale features
-            input_df = input_df[selected_features]
-            input_scaled = scaler.transform(input_df)
-            
-            # Make prediction
-            prediction = model.predict(input_scaled)[0]
-            probability = model.predict_proba(input_scaled)[0][1]
-            
-            # Return template with results
-            return render_template(
-                'prediction.html',
-                prediction=int(prediction),
-                probability=round(float(probability), 3),
-                features=input_data
-            )
-        except Exception as e:
-            return render_template('index.html', error=str(e), features=selected_features)
-
-@main.route('/api/docs')
-def api_docs():
-    return jsonify({
-        'description': 'API for model predictions',
-        'endpoints': {
-            '/predict': {
-                'method': 'POST',
-                'description': 'Make a prediction',
-                'parameters': {feature: 'numeric' for feature in selected_features},
-                'returns': {
-                    'prediction': 'class label (0 or 1)',
-                    'probability': 'probability of positive class'
-                }
-            }
-        },
-        'example': {
-            'request': {feature: 0 for feature in selected_features},
-            'response': {
-                'prediction': 0,
-                'probability': 0.123
-            }
-        }
-    })
-```
-
-**app/templates/index.html**
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Classification Model API</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body { padding: 20px; }
-        .container { max-width: 800px; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1 class="mb-4">Classification Model Predictor</h1>
-        
-        {% if error %}
-        <div class="alert alert-danger">{{ error }}</div>
-        {% endif %}
-        
-        <div class="card mb-4">
-            <div class="card-header">
-                <h2 class="h5 mb-0">Enter Feature Values</h2>
-            </div>
-            <div class="card-body">
-                <form action="/predict" method="post">
-                    {% for feature in features %}
-                    <div class="mb-3">
-                        <label for="{{ feature }}" class="form-label">{{ feature }}</label>
-                        <input type="number" step="any" class="form-control" id="{{ feature }}" name="{{ feature }}" required>
-                    </div>
-                    {% endfor %}
-                    <button type="submit" class="btn btn-primary">Predict</button>
-                </form>
+This should give you a solid foundation for tackling these questions. Good luck with your interviews!
