@@ -1,0 +1,13 @@
+The most popular trees are: AdaBoost, Random Forest, and eXtreme Gradient Boosting (XGBoost).
+AdaBoost is best used in a dataset with low noise, when computational complexity or timeliness of results
+is not a main concern and when there are not enough resources for broader hyperparameter tuning due
+to lack of time and knowledge of the user.
+Random forests should not be used when dealing with time series data or any other data where lookahead bias should be avoided, and the order and continuity of the samples need to be ensured. This
+algorithm can handle noise relatively well, but more knowledge from the user is required to adequately
+tune the algorithm compared to AdaBoost.
+The main advantages of XGBoost is its lightning speed compared to other algorithms, such as AdaBoost,
+and its regularization parameter that successfully reduces variance. But even aside from the regularization
+parameter, this algorithm leverages a learning rate (shrinkage) and subsamples from the features like
+random forests, which increases its ability to generalize even further. However, XGBoost is more difficult
+to understand, visualize and to tune compared to AdaBoost and random forests. There is a multitude of
+hyperparameters that can be tuned to increase performance. 
