@@ -1,3 +1,12 @@
+important queestions
+
+https://www.interviewquery.com/interview-guides/resmed-data-scientist
+
+
+---
+
+
+
 Machine learning algorithms are computational methods that enable systems to learn patterns from data and make predictions or decisions without being explicitly programmed. They are broadly categorized into three types: **supervised learning**, **unsupervised learning**, and **reinforcement learning**. Below is a list of common machine learning algorithms, organized by category:
 
 ---
